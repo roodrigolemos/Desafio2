@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fGQ-xx-Mv3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="lXh-zm-fiV">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="fGQ-xx-Mv3" customClass="ViewController" customModule="Desafio2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hno-JP-LSY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picaxu" translatesAutoresizingMaskIntoConstraints="NO" id="vz4-U6-vfS">
+                                <rect key="frame" x="-130.5" y="-152" width="675" height="1200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1200" id="Kbd-kX-P9i"/>
+                                    <constraint firstAttribute="width" constant="675" id="nfm-Ko-4df"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon API" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxd-gh-h5j">
+                                <rect key="frame" x="95" y="89" width="224" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QJ-M9-AEI">
+                                <rect key="frame" x="94" y="778" width="226" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="8J9-ZQ-V3A"/>
+                                    <constraint firstAttribute="width" constant="226" id="l2d-Pf-kTs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadApi:" destination="fGQ-xx-Mv3" eventType="touchUpInside" id="9Os-hB-z59"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RvW-Sk-eLV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gxd-gh-h5j" firstAttribute="top" secondItem="RvW-Sk-eLV" secondAttribute="top" constant="45" id="2T5-eK-vrg"/>
+                            <constraint firstItem="1QJ-M9-AEI" firstAttribute="centerX" secondItem="Hno-JP-LSY" secondAttribute="centerX" id="3Or-hJ-hU8"/>
+                            <constraint firstItem="RvW-Sk-eLV" firstAttribute="bottom" secondItem="1QJ-M9-AEI" secondAttribute="bottom" constant="30" id="IPf-7d-nTR"/>
+                            <constraint firstItem="vz4-U6-vfS" firstAttribute="centerX" secondItem="Hno-JP-LSY" secondAttribute="centerX" id="RlD-6d-SKm"/>
+                            <constraint firstItem="vz4-U6-vfS" firstAttribute="centerY" secondItem="Hno-JP-LSY" secondAttribute="centerY" id="der-VD-Qpb"/>
+                            <constraint firstItem="gxd-gh-h5j" firstAttribute="centerX" secondItem="Hno-JP-LSY" secondAttribute="centerX" id="kgJ-L9-8YN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="downloadButton" destination="1QJ-M9-AEI" id="65O-iK-Bbr"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eyz-uJ-CWA" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="picaxu" width="675" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
